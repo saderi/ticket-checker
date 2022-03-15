@@ -1,0 +1,11 @@
+{
+    "name": "ticket-checker",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "jsdom": "^19.0",
+        "form-data": "^4.0",
+        "axios": "^0.26",
+        "dotenv": "^16.0.0"
+    }
+}
