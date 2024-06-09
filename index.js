@@ -6,7 +6,7 @@ dotenv.config();
 
 var data = new FormData();
 data.append('chat_id',process.env.TELEGRAM_CHAT_ID);
-data.append('text', process.env.TELEGRAM_TEXT);
+data.append('text', process.env.TELEGRAM_TEXT+' '+process.env.FILM_URL);
 
 var config = {
   	method: 'post',
@@ -19,8 +19,9 @@ var config = {
 
 const { JSDOM } = jsdom;
 JSDOM.fromURL(process.env.FILM_URL, {}).then(dom => {
-    var test = dom.window.document.querySelectorAll('.movie-details-header .movie-buttons a');
-    if ( test[0].text == 'Bilet Al' ) {
+    var test = dom.window.document.querySelectorAll('.film-detail-bottom-btns a');
+    console.log(test[0].text);
+    if ( test[0].text == 'Hemen Bilet Al' ) {
 
         axios(config)
         .then(function (response) {
