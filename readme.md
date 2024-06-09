@@ -17,3 +17,6 @@ paribucineverse.com is a movie ticket booking website in Turkey. They didn't pro
 - Run `node index.js`
 
 You can add cron job to run this script every 5 minutes or one hour.
+
+# How to get channel id
+check this link: https://stackoverflow.com/questions/32423837/telegram-bot-how-to-get-a-group-chat-id
